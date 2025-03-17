@@ -23,14 +23,9 @@ export class Clock extends React.Component<NameProp, ClockState> {
     }, 1000);
   }
 
-  componentDidUpdate(
-    prevProps: Readonly<NameProp>,
-    prevState: Readonly<ClockState>,
-  ) {
-    if (prevState.today !== this.state.today) {
-      // eslint-disable-next-line no-console
-      console.log(this.state.today);
-    }
+  componentDidUpdate(prevProps: Readonly<NameProp>) {
+    // eslint-disable-next-line no-console
+    console.log(this.state.today);
 
     if (prevProps.name !== this.props.name) {
       // eslint-disable-next-line no-console
