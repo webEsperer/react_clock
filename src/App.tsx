@@ -40,9 +40,9 @@ export class App extends React.Component<{}, AppState> {
     document.addEventListener('click', this.handleClick);
 
     this.timeId = setInterval(() => {
-      this.setState(() => ({
+      this.setState({
         clockName: getRandomName(),
-      }));
+      });
     }, 3300);
   }
 
